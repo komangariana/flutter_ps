@@ -7,19 +7,64 @@ class Home extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         color: Colors.deepOrangeAccent,
-        // width: 192.0,
-        // height: 100.0,
-        // margin: EdgeInsets.only(left:50.0),
-        child: Text('Pizza', 
-          textDirection: TextDirection.ltr,
-          style: TextStyle(
-            fontSize: 80.0,
-            decoration: TextDecoration.none,
-            fontFamily: 'Lato',
-            fontWeight: FontWeight.w900,
-            fontStyle: FontStyle.italic
-          ),
-        ),
+        padding: EdgeInsets.only(top: 30.0, left: 20.0),
+        child: Column(
+          children: <Widget>[
+            Row(children: <Widget>[
+              Expanded(
+                child: Text('Margherita', 
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                    fontSize: 30.0,
+                    decoration: TextDecoration.none,
+                    fontFamily: 'Lato',
+                    fontWeight: FontWeight.w900,
+                    fontStyle: FontStyle.normal
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Text('Tomato, Mozzarela, Basil', 
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    decoration: TextDecoration.none,
+                    fontFamily: 'Lato',
+                    fontWeight: FontWeight.w700,
+                    fontStyle: FontStyle.italic
+                  ),
+                ),
+              )
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text('Marinara', 
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                    fontSize: 30.0,
+                    decoration: TextDecoration.none,
+                    fontFamily: 'Lato',
+                    fontWeight: FontWeight.w900,
+                    fontStyle: FontStyle.normal
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Text('Tomato, Garlic', 
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    decoration: TextDecoration.none,
+                    fontFamily: 'Lato',
+                    fontWeight: FontWeight.w700,
+                    fontStyle: FontStyle.italic
+                  ),
+                ),
+              )
+            ])
+          ]
+        )
+        
       )
     );
   }
