@@ -39,7 +39,11 @@ class _HelloYouState extends State<HelloYou> {
               ),
               onChanged: (String string) {
                 setState((){
-                  welcomeText = 'Hello ' + string + ', how are you ?';
+                  if (string == '') {
+                    welcomeText = '';
+                  } else {
+                    welcomeText = 'Hello ' + string + ', how are you ?';
+                  }
                 });
               }
             ),
