@@ -61,11 +61,21 @@ class Home extends StatelessWidget {
                   ),
                 ),
               )
-            ])
+            ]),
+            PizzaLogo(),
           ]
         )
         
       )
     );
+  }
+}
+
+class PizzaLogo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage pizzaAsset = AssetImage('images/pizza.png');
+    Image image = Image(image: pizzaAsset, width: 200.0, height: 200.0);
+    return Container(child: image);
   }
 }
