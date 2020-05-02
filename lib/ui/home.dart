@@ -15,6 +15,9 @@ class Home extends StatelessWidget {
           style: TextStyle(
             fontSize: 80.0,
             decoration: TextDecoration.none,
+            fontFamily: 'Lato',
+            fontWeight: FontWeight.w900,
+            fontStyle: FontStyle.italic
           ),
         ),
       )
