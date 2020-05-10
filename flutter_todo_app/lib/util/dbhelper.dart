@@ -30,7 +30,7 @@ class DbHelper {
 
   Future<Database> initializeDb() async {
     Directory dir = await getApplicationDocumentsDirectory();
-    String path = dir.path + "todos.db";
+    String path = dir.path + "todo.db";
     var dbTodos = await openDatabase(path, version: 1, onCreate: _createDb);
     return dbTodos;
   }
@@ -38,7 +38,7 @@ class DbHelper {
   void _createDb (Database db, int newVersion) async {
     await db.execute(
       "CREATE TABLE $tblTodo(" +
-        "$colId INTEGER PRIMARY_KEY," +
+        "$colId INTEGER PRIMARY KEY," +
         "$colTitle TEXT," +
         "$colDescription TEXT," +
         "$colPriority INTEGER," +
